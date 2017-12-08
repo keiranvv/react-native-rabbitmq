@@ -35,7 +35,7 @@ public class RabbitMqConsumer extends DefaultConsumer {
 
         Boolean is_redeliver = envelope.isRedeliver();
 
-        String message = new String(body, "UTF-8");
+        String message = new String(body, "UTF-16");
 
         WritableMap message_params = Arguments.createMap();
         message_params.putString("name", "message");
